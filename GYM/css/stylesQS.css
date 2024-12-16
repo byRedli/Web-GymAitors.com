@@ -1,0 +1,149 @@
+
+:root {
+    --color-primario: #282828;
+    --color-secundario: #E4981E;
+    --text-color--primario: #E7E7E5;
+    --text-color--secundario: #282828;
+    --color-extra--uno: #666666;
+    --color-extra--dos: #141414;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    background-color: var(--color-primario);
+}
+
+
+header{
+    grid-area: header;
+    display: flex;
+    height: 80vh;
+    background: linear-gradient(to left, 
+    rgba(0, 0, 0, 0.8), 
+    rgba(70, 70, 70, 0)), url(./Img/QS-Img.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+.text-M{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+    height: 40%;
+    padding: 0;
+    margin: 150px 0 0 150px;
+}
+
+.tittle-M, .subTittle-M{
+    text-shadow: 2px 2px 5px black;
+    padding: 0;
+    margin: 0;
+}
+
+
+.tittle-M{
+    font-size: 5vw;
+    color: var(--color-secundario);
+}
+.subTittle-M{
+    font-size: 2vw;
+    color: var(--text-color--primario);
+}
+
+
+.container-QS{
+    grid-area: main;
+    display: flex;
+    padding: 50px 20px;
+    width: 100%;
+    gap: 30px;
+    background-color: var(--color-primario);
+}
+
+.info-fundador{
+    width: 30vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    gap: 20px;
+    background-color: var(--color-extra--dos);
+    border-radius: 10px;
+}
+
+.info-fundador img{
+    width: 70%;
+    height: 66%;
+    border-radius: 10px;
+    border: 2px solid var(--text-color--primario);
+}
+
+.info-fundador h1{
+    color: var(--text-color--primario);
+    font-size: 1.5vw;
+}
+
+.info-fundador p{
+    color: var(--text-color--primario);
+    font-size: 0.8vw;
+    width: 70%;
+    text-align: justify;
+}
+
+.info-gym{
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-extra--dos);
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 40px;
+}
+
+.info-gym p{
+    color: var(--text-color--primario);
+    text-align: center;
+    font-size: 1vw;
+}
+
+.info-gym h1{
+    color: var(--color-secundario);
+    text-decoration: underline;
+    font-size: 1.5vw;
+}
+
+.MV-QS, .Ubicacion-QS, .redes-QS{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+}
+
+.redes-QS a{
+    text-decoration: none;
+    color: var(--text-color--primario);
+    font-size: 1vw;
+}
+
+footer{
+    grid-area: footer;
+}

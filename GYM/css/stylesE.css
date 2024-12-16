@@ -1,0 +1,128 @@
+:root{
+    --color-primario:#282828;
+    --color-secundario:#E4981E;
+    --text-color--primario:#E7E7E5;
+    --text-color--secundario:#282828;
+    --color-extra--uno:#666666;
+    --color-extra--dos:#141414;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    background-color: var(--color-primario);
+}
+
+
+header{
+    grid-area: header;
+    display: flex;
+    height: 80vh;
+    background: linear-gradient(to left, 
+    rgba(0, 0, 0, 0.8), 
+    rgba(70, 70, 70, 0)), 
+    url('./Img/Encabezado2.PNG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+.text-M{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+    height: 40%;
+    padding: 0;
+    margin: 150px 0 0 150px;
+}
+
+.tittle-M, .subTittle-M{
+    text-shadow: 2px 2px 5px black;
+    padding: 0;
+    margin: 0;
+}
+
+
+.tittle-M{
+    font-size: 5vw;
+    color: var(--color-secundario);
+}
+.subTittle-M{
+    font-size: 2vw;
+    color: var(--text-color--primario);
+}
+
+
+
+.container-Entrenadores{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 40px;
+    background-color: var(--color-primario);
+    gap: 20px;
+}
+
+
+.container-Entrenadores h1{
+    font-size: 2vw;
+    color: var(--color-secundario);
+}
+.container-Entrenadores p{
+    color: var(--text-color--primario);
+    font-size: 1vw;
+}
+
+.entrenador{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    margin-top: 6vh;
+}
+
+.entrenador img{
+    width: 300px;
+    height: 300px;
+    border: 15px solid var(--text-color--primario);
+    border-radius: 20px;
+}
+
+.entrenador div{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-color--primario);
+    justify-content: center;
+    height: 250px;
+    width: 750px;
+    padding-left: 20px;
+    border-radius: 0 20px 20px 0;
+}
+
+.entrenador div h1, .entrenador div p{
+    color: var(--text-color--secundario);
+}
+
+
+
+footer{
+    grid-area: footer;
+}

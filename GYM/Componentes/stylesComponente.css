@@ -1,0 +1,474 @@
+:root {
+    --color-primario: #282828;
+    --color-secundario: #E4981E;
+    --text-color--primario: #E7E7E5;
+    --text-color--secundario: #282828;
+    --color-extra--uno: #666666;
+    --color-extra--dos: #141414;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* ESTILOS NAVBAR */
+
+.container-nav {
+    display: flex;
+    width: 100%;
+    min-height: 90px;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-extra--dos);
+    z-index: 1;
+}
+
+
+.logo {
+    width: 15%;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina-web{
+    display: none;
+}
+
+.nav-bar{
+    width: 50%;
+}
+
+.btn-lr{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.nav-bar label.menu-icon {
+    display: none;
+}
+
+
+.container-nav a{
+    text-decoration: none;
+    color: var(--text-color--primario);
+    font-weight: bold;
+    font-size: 0.8vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .login, .menu .register{
+    display: none;
+}
+
+.container-nav li{
+    display: flex;
+    list-style-type: none;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.opc-nav{
+    display: flex;
+    text-align: center;
+    width: 10vw;
+    height: 45px;
+    min-width: 120px;
+    cursor: default;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.opc-nav:hover{
+    background-color: var(--color-secundario);
+}
+
+
+.btn-lr li{
+    width: 25%;
+    min-width: 100px;
+    height: 45%;
+    border-radius: 3px;
+    box-shadow: 1px 1px 7px rgb(30, 30, 30);
+}
+
+
+.register{
+    background-color: var(--color-secundario);
+    width: 7vw;
+    height: 45px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login{
+    border: 1px solid rgb(255, 255, 255);
+    width: 7vw;
+    height: 45px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login:hover {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: var(--text-color--primario);
+}
+
+.login:hover a{
+    color: rgb(0, 0, 0);
+}
+
+.register:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: var(--text-color--primario);
+}
+
+.register:hover a{
+    color: var(--text-color--secundario);
+}
+
+.pagina-web h1{
+    font-size: 30px;
+    color: var(--color-secundario);
+}
+
+
+.User{
+    display: flex;
+    background-color: var(--color-extra--dos);
+    align-items: center;
+    width: 15vw;
+    height: 100px;
+}
+
+#User-logeado{
+    color: var(--text-color--primario);
+    font-size: 0.8vw;
+    width: 50px;
+}
+#User-logeado:hover{
+    text-decoration: underline;
+    color: var(--color-secundario);
+}
+
+.User ion-icon{
+    font-size: 2vw;
+    align-items: center;
+    color: var(--text-color--primario);
+}
+
+.User ioion-icon, .User p{
+    font-size: 0.8vw;
+    color: var(--text-color--primario);
+}
+
+.User button{
+    background-color: transparent;
+    color: var(--text-color--primario);
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    width: 100px;
+}
+.User button:hover{
+    color:var(--color-secundario)
+}
+
+
+@media (max-width: 1100px) {
+    .btn-lr{
+        display: none;
+    }
+
+    .logo{
+        width: 10%;
+        padding-left: 15px;
+    }
+
+    .pagina-web{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .nav-bar{
+        width: 10%;
+        min-height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 15px;
+    }
+
+    .menu .login, .menu .register{
+        display: flex;
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .nav-bar label.menu-icon {
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        height: 30px;
+        margin-right: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .nav-bar ul.menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        border-top: 1px solid white;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        background-color: var(--color-extra--dos);
+        gap: 10px;
+        z-index: 1;
+    }
+    
+
+
+    .menu-icon .line {
+        width: 30px;
+        height: 3px;
+        background-color: var(--text-color--primario);
+        margin: 5px 0;
+        transition: 0.3s;
+        z-index: 2;
+    }
+
+    /* Cambiar el icono de hamburguesa a "X" al abrir */
+    #menu-toggle:checked + label.menu-icon .line:first-child {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    #menu-toggle:checked + label.menu-icon .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon .line:last-child {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+        z-index: 1;
+    }
+
+    .menu li{
+        height: 50px;
+        width: 100%;
+    }
+    .opc-nav a{
+        font-size: 15px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ESTILOS FOOTER */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    background-color: var(--color-secundario);
+    padding: 20px 0;
+    justify-content: space-evenly;
+
+}
+
+.line{
+    width: 5px;
+    background-color: var(--text-color--primario);
+}
+
+.list-footer, .mas-footer, .redes-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer a{
+    color: var(--text-color--primario);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 20px;
+    transition: color 0.2s ease-in-out;
+}
+
+footer h3{
+    color: var(--text-color--secundario)
+}
+
+.list-footer, .mas-footer, .redes-footer{
+    width: 30vw;
+}
+
+.list-footer a:hover, .mas-footer a:hover{
+    color: var(--text-color--secundario);
+}
+
+.mas-footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-footer, .redes-footer{
+    gap: 10px;
+    padding: 0 30px;
+}
+
+.list-footer, .redes-footer{
+    gap: 20px;
+}
+
+.list-footer a, .redes-footer a{
+    display: flex;
+}
+
+.redes-footer a{
+    gap: 5px;
+}
+
+.mas-footer{
+    justify-content: center;
+    align-items: center;
+}
+
+.input-Contact{
+    display: flex;
+    gap: 5px;
+}
+
+.redes-footer p{
+    color: var(--text-color--primario);
+    font-size: 15px;
+}
+
+
+.input-Contact input{
+    width: 150px;
+    height: 25px;
+}
+
+.input-Contact button{
+    height: 25px;
+    width: 150px;
+    font-size: 15px;
+    color: var(--text-color--primario);
+    background-color: var(--color-primario);
+    cursor: pointer;
+}
+
+.f-link:hover{
+    color: rgb(71, 87, 226);
+}
+.ig-link:hover{
+    color: rgb(255, 46, 133);
+}
+.tk-link:hover{
+    color: #282828;
+}
+.ws-link{
+    cursor:default
+}
+
+
+@media (max-width: 980px) {
+    footer{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .list-footer{
+        width: 45%;
+        order: 0;
+    }
+    
+    .line:nth-child(1){order:0.5}
+    .line:nth-child(2){display: none;}
+
+    .mas-footer{
+        order: 3;
+        width: 100%;
+    }
+
+    .redes-footer{
+        order: 1;
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 700px) {
+    footer{
+        flex-direction: column;
+    }
+    .line{
+        display: none;
+    }
+
+    .list-footer, .mas-footer, .redes-footer{
+        width: 100%;
+        min-height: 30vh;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .list-footer a , .redes-footer a {
+        justify-content: center;
+        align-items: center;
+    }    
+    
+    .list-footer , .redes-footer {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-footer{
+        order: 0;
+    }
+    .mas-footer{
+        order: 1;
+    }
+    .redes-footer{
+        order: 2;
+    }
+
+
+}
